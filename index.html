@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goonshop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Hlavicka -->
+  <header class="header">
+    <div class="header-left"></div>
+    <div class="header-center">
+      <img src="images/logo.png" alt="Goonshop Logo" class="logo">
+    </div>
+    <div class="header-right">
+      <button onclick="scrollToSection('about')">O nás</button>
+      <button onclick="scrollToSection('contact')">Kontaktujte nás</button>
+    </div>
+  </header>
+
+  <!-- Citát -->
+  <section class="quote">
+    <p>"Něco něco bla bla bla..."</p>
+    <span>- Vojtěch Svoboda</span>
+  </section>
+
+  <!-- Produkty -->
+  <main class="products">
+    <h2>Naše produkty</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/tricko1.jpg" alt="Tričko Goonshop">
+        <h3>Tričko Goonshop</h3>
+        <p>Stylové tričko s logem.</p>
+        <button>Přidat do košíku</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/tricko2.jpg" alt="Tričko Goonshop Black">
+        <h3>Tričko Black Edition</h3>
+        <p>Kvalitní bavlna, černá barva.</p>
+        <button>Přidat do košíku</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/cepice1.jpg" alt="Čepice Goonshop">
+        <h3>Čepice Goonshop</h3>
+        <p>Pro zimní dny i streetwear.</p>
+        <button>Přidat do košíku</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- O nás -->
+  <section id="about" class="about">
+    <h2>O nás</h2>
+    <p>Jsme Goonshop – značka, která spojuje styl, kvalitu a originalitu. Naším cílem je nabídnout oblečení, které budeš rád nosit každý den.</p>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="contact" class="contact">
+    <h2>Kontaktujte nás</h2>
+    <form>
+      <input type="text" placeholder="Vaše jméno" required>
+      <input type="email" placeholder="Váš email" required>
+      <textarea placeholder="Vaše zpráva" required></textarea>
+      <button type="submit">Odeslat</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Goonshop. Všechna práva vyhrazena.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
