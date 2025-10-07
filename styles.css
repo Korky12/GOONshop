@@ -44,7 +44,7 @@ body {
 .socials img {
   height: 28px;
   margin-left: 15px;
-  filter: brightness(0);
+  filter: brightness(0,7);
   transition: 0.3s;
 }
 
