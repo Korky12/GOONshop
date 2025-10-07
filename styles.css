@@ -6,139 +6,143 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f5f5f5;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #111;
 }
 
-/* Hlavicka */
+/* HLAVICKA */
 .header {
   position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111;
-  padding: 10px 20px;
+  background: #bfbfbf;
+  padding: 15px 30px;
   z-index: 1000;
 }
 
-.header-center .logo {
+.about-btn {
+  background: #fff;
+  border: 2px solid #000;
+  padding: 8px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.about-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.logo-center img {
   height: 50px;
 }
 
-.header-right button {
-  margin-left: 10px;
-  padding: 8px 12px;
-  border: none;
-  background: #ff4d4d;
-  color: white;
-  cursor: pointer;
-  border-radius: 4px;
+.socials img {
+  height: 28px;
+  margin-left: 15px;
+  filter: brightness(0);
+  transition: 0.3s;
 }
 
-.header-right button:hover {
-  background: #e63c3c;
+.socials img:hover {
+  filter: brightness(1);
 }
 
-/* Citát */
+/* CITÁT */
 .quote {
   text-align: center;
   padding: 40px 20px;
-  font-size: 1.3rem;
-  background: #fff;
 }
 
-.quote span {
-  display: block;
-  margin-top: 10px;
-  font-style: italic;
-  color: #666;
-}
-
-/* Produkty */
-.products {
-  padding: 40px 20px;
-  background: #f5f5f5;
-}
-
-.products h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.product-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.product-card img {
-  width: 100%;
-  border-radius: 8px;
+.quote h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-.product-card button {
-  margin-top: 10px;
-  padding: 8px 12px;
-  border: none;
-  background: #111;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 4px;
+.quote p {
+  color: #555;
 }
 
-.product-card button:hover {
-  background: #333;
-}
-
-/* O nás a Kontakt */
-.about, .contact {
+/* PRODUKTY */
+.products {
+  text-align: center;
   padding: 40px 20px;
-  background: #fff;
 }
 
-.contact form {
+.product-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.product {
+  background: #ccc;
+  width: 220px;
+  height: 260px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  max-width: 400px;
-  margin: auto;
+  justify-content: center;
+  align-items: center;
 }
 
-.contact input, .contact textarea {
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.product p {
+  margin-top: 10px;
+  font-weight: 500;
 }
 
-.contact button {
-  padding: 10px;
+.more-btn {
+  background: #bfbfbf;
   border: none;
-  background: #111;
-  color: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 4px;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-.contact button:hover {
-  background: #333;
+.more-btn:hover {
+  background: #999;
+  color: #fff;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-  text-align: center;
-  padding: 20px;
-  background: #111;
-  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: #bfbfbf;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.footer-left, .footer-right {
+  text-align: left;
+  min-width: 250px;
+}
+
+.footer-left img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+footer h3 {
+  margin-bottom: 8px;
+}
+
+footer p, footer a {
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

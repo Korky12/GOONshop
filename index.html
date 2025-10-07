@@ -7,70 +7,57 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Hlavicka -->
+  <!-- HLAVICKA -->
   <header class="header">
-    <div class="header-left"></div>
-    <div class="header-center">
-      <img src="images/logo.png" alt="Goonshop Logo" class="logo">
+    <button class="about-btn" onclick="scrollToSection('about')">O Nás</button>
+    <div class="logo-center">
+      <img src="images/logo.png" alt="Goonshop Logo">
     </div>
-    <div class="header-right">
-      <button onclick="scrollToSection('about')">O nás</button>
-      <button onclick="scrollToSection('contact')">Kontaktujte nás</button>
+    <div class="socials">
+      <a href="#" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+      <a href="#" target="_blank"><img src="images/tiktok.png" alt="TikTok"></a>
     </div>
   </header>
 
-  <!-- Citát -->
+  <!-- CITÁT -->
   <section class="quote">
-    <p>"Něco něco bla bla bla..."</p>
-    <span>- Vojtěch Svoboda</span>
+    <h2>„Přišel jsem, koupil jsem, goonoval jsem“</h2>
+    <p>Svoboda Votěch, CEO of Goonshop</p>
   </section>
 
-  <!-- Produkty -->
+  <!-- PRODUKTY -->
   <main class="products">
-    <h2>Naše produkty</h2>
     <div class="product-grid">
-      <div class="product-card">
-        <img src="images/tricko1.jpg" alt="Tričko Goonshop">
-        <h3>Tričko Goonshop</h3>
-        <p>Stylové tričko s logem.</p>
-        <button>Přidat do košíku</button>
+      <div class="product">
+        <img src="images/tricko1.jpg" alt="Triko Goonshop">
+        <p>Triko</p>
       </div>
-
-      <div class="product-card">
-        <img src="images/tricko2.jpg" alt="Tričko Goonshop Black">
-        <h3>Tričko Black Edition</h3>
-        <p>Kvalitní bavlna, černá barva.</p>
-        <button>Přidat do košíku</button>
+      <div class="product">
+        <img src="images/tricko2.jpg" alt="Triko Goonshop">
+        <p>Triko</p>
       </div>
-
-      <div class="product-card">
-        <img src="images/cepice1.jpg" alt="Čepice Goonshop">
-        <h3>Čepice Goonshop</h3>
-        <p>Pro zimní dny i streetwear.</p>
-        <button>Přidat do košíku</button>
+      <div class="product">
+        <img src="images/tricko3.jpg" alt="Triko Goonshop">
+        <p>Triko</p>
       </div>
     </div>
+    <button class="more-btn">Další sortiment</button>
   </main>
 
-  <!-- O nás -->
-  <section id="about" class="about">
-    <h2>O nás</h2>
-    <p>Jsme Goonshop – značka, která spojuje styl, kvalitu a originalitu. Naším cílem je nabídnout oblečení, které budeš rád nosit každý den.</p>
-  </section>
-
-  <!-- Kontakt -->
-  <section id="contact" class="contact">
-    <h2>Kontaktujte nás</h2>
-    <form>
-      <input type="text" placeholder="Vaše jméno" required>
-      <input type="email" placeholder="Váš email" required>
-      <textarea placeholder="Vaše zpráva" required></textarea>
-      <button type="submit">Odeslat</button>
-    </form>
-  </section>
-
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Goonshop. Všechna práva vyhrazena.</p>
+    <div class="footer-left">
+      <img src="images/logo.png" alt="Goonshop logo">
+      <h3>Goonshop</h3>
+      <p><strong>Kontaktujte nás</strong></p>
+      <p>Email: <a href="mailto:info@goonshop.cz">info@goonshop.cz</a></p>
+    </div>
+
+    <div class="footer-right">
+      <h3>Sledujte nás</h3>
+      <p><a href="#">TikTok</a></p>
+      <p><a href="#">Instagram</a></p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
