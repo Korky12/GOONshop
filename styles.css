@@ -43,23 +43,28 @@ body {
 }
 
 .socials img {
-  height: 40px;
-  filter: brightness();
+  height: 50px;
+  filter: brightness(0.9);
   transition: 0.3s;
+  background-color: transparent;
+  border: none;
 }
-
 .socials img:hover {
-  filter: brightness(1);
+  filter: brightness(1.2);
 }
 
+.socials img:active {
+  filter: brightness(0.7);
+}
 /* CITÁT */
 .quote {
   text-align: center;
   padding: 40px 20px;
+  padding-bottom: 5px;
 }
 
 .quote h2 {
-  font-size: 1.6rem;
+  font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -72,12 +77,13 @@ body {
 .products {
   text-align: center;
   padding: 40px 20px;
+  padding-top: 5px;
 }
 
 /* Kontejner s produkty */
 .product-grid {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 30px;
   padding: 40px 20px;
@@ -85,8 +91,8 @@ body {
 
 /* Každý produkt (čtverec s rámečkem) */
 .product {
-  width: 250px;              /* šířka čtverce */
-  height: 250px;             /* výška čtverce */
+  width: 350px;              /* šířka čtverce */
+  height: 350px;             /* výška čtverce */
   background-color: #f0f0f0; /* barva pozadí */
   border: 3px solid black;   /* silný černý okraj */
   border-radius: 10px;       /* zaoblení rohů (volitelné) */
