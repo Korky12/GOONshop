@@ -77,24 +77,23 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  background: #989898;
+  background: #222831;
   padding: 40px 20px;
   flex-wrap: wrap;
+}
+
+.footer-logos img {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .footer-left, .footer-right {
   text-align: left;
   min-width: 250px;
-}
-
-.footer-left img {
-  height: 40px;
-  margin-bottom: 10px;
-}
-
-.footer-right img {
-    height: 40px;
-    margin-bottom: 10px;
 }
 
 footer h3 {
@@ -103,13 +102,10 @@ footer h3 {
 
 footer p, footer a {
   font-size: 1rem;
-  color: #000;
+  color: #dfdfdf;
   text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
-}
-footer a:active {
-  color: #555;
 }
