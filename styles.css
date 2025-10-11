@@ -57,6 +57,14 @@ body {
   margin: 10px
 }
 
+.socials {
+  display: flex;
+  justify-content: center; /* zarovná vodorovně na střed */
+  align-items: center; /* zarovná svisle na střed */
+  gap: 10px; /* mezera mezi ikonami */
+  flex-wrap: wrap;
+}
+
 .socials img {
   height: 50px;
   filter: brightness(0.9);
