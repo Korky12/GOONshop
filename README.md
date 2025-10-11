@@ -1,4 +1,3 @@
-*goonshop*
+# GOONshop
 
-#goonshop#
-Webova stránka k eshopu goonshop.
+Webova stránka k eshopu ([goonshop.](goonshop.online))
