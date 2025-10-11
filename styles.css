@@ -159,6 +159,71 @@ body {
   color: #fff;
 }
 
+.reviews-box {
+  background: #222831;
+  color: #fff;
+  padding: 32px 0;
+  text-align: center;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+/* 🔹 Na mobilech přidáme odsazení od okrajů */
+@media (max-width: 768px) {
+  .reviews-box {
+    margin: 40px 20px; /* nahoře/dole 40px, vpravo/vlevo 20px */
+  }
+}
+
+.reviews-box h2 {
+  margin-bottom: 18px;
+  font-size: 2rem;
+  font-weight: 600;
+  }
+.review-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  }
+.arrow-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0 12px;
+  }
+.arrow-btn:hover {
+  color: #00adb5;
+  }
+.review-text {
+  min-width: 260px;
+  max-width: 340px;
+  transition: opacity 0.4s, transform 0.4s;
+  opacity: 1;
+  transform: translateX(0);
+  }
+.review-text.hide-left {
+  opacity: 0;
+  transform: translateX(-80px);
+  }
+.review-text.hide-right {
+  opacity: 0;
+  transform: translateX(80px);
+  }
+.review-author {
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #ccc;
+  }
+
 /* FOOTER */
 footer {
   display: flex;
@@ -178,12 +243,13 @@ footer {
   margin-bottom: 20px;
 }
 
-.footer-left, .footer-right {
+.footer-left, .footer-right, .footer-center {
   text-align: left;
   min-width: 250px;
 }
 
 footer h3 {
+  margin-top: 14px;
   margin-bottom: 8px;
 }
 
