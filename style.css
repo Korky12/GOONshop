@@ -284,6 +284,19 @@ body {
   color: #ccc;
   }
 
+.arrow-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0 12px;
+  }
+.arrow-btn:hover {
+  color: #00adb5;
+  }
+
 /* FOOTER */
 footer {
   display: flex;
