@@ -23,6 +23,8 @@ body {
   animation: slidePageUp 0.5s ease-out forwards;
   opacity: 0;
   transform: stranslateY(50px);
+  overflow-x: hidden;
+  touch-action: pan-y;
 }
 
 /* HLAVICKA */

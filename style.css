@@ -26,6 +26,7 @@ body {
   opacity: 0;
   transform: stranslateY(50px);
   overflow-x: hidden;
+  touch-action: pan-y;
 }
 
 /* HLAVICKA */
@@ -205,9 +206,6 @@ body {
 
 /* ===== MOBIL ===== */
 @media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
 
   .product-wrapper {
     max-width: 350px;  /* přesně jeden produkt */
