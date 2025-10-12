@@ -152,6 +152,37 @@ body {
 .product p {
   display: none;
 }
+.slider-controls {
+  text-align: center;
+  margin-top: 20px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Wrapper / rámeček kolem šipek */
+.arrow {
+  font-size: 2rem;
+  background-color: #222831; /* barva rámečku */
+  border: 2px solid #f0f0f0; /* barva okraje */
+  border-radius: 12px;       /* zaoblení rohů */
+  width: 60px;               /* šířka rámečku */
+  height: 60px;              /* výška rámečku */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #f0f0f0;
+}
+
+/* Hover efekt */
+.arrow:hover {
+  background-color: #102a33; /* pozadí se změní */
+  color: #fff;               /* šipka se změní na bílou */
+  transform: scale(1.1);     /* mírné zvětšení */
+}
+
 
 /* Tlačítko Další sortiment */
 .more-btn {
@@ -164,7 +195,7 @@ body {
   font-weight: 600;
   font-size: large;
   transition: 0.3s;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .more-btn:hover {
@@ -208,6 +239,7 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   max-width: 800px;
   box-sizing: border-box;
+  
 }
 
 /* 🔹 Na mobilech přidáme odsazení od okrajů */
@@ -228,18 +260,7 @@ body {
   justify-content: center;
   gap: 16px;
   }
-.arrow-btn {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: color 0.2s;
-  padding: 0 12px;
-  }
-.arrow-btn:hover {
-  color: #00adb5;
-  }
+
 .review-text {
   min-width: 260px;
   max-width: 340px;

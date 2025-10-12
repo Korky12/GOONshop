@@ -1,16 +1,14 @@
-// JS
 const grid = document.querySelector('.product-grid');
 const products = Array.from(document.querySelectorAll('.product'));
-const productWidth = 350 + 30; // šířka + gap
+const productWidth = 350 + 30; // šířka produktu + mezera
 let index = 0;
 
-// Nekonečný loop: přesuň první prvek na konec při každém posunu
+// Automatický posun
 function slideNext() {
   index++;
   grid.style.transition = 'transform 0.6s ease';
   grid.style.transform = `translateX(-${index * productWidth}px)`;
 
-  // Po dokončení animace přesuň první produkt na konec a resetuj transform
   setTimeout(() => {
     const first = grid.children[0];
     grid.appendChild(first);
@@ -21,6 +19,23 @@ function slideNext() {
 }
 
 setInterval(slideNext, 6000);
+
+// Manuální šipky
+function slidePrev() {
+  const last = grid.children[grid.children.length - 1];
+  grid.insertBefore(last, grid.children[0]);
+  grid.style.transition = 'none';
+  grid.style.transform = `translateX(-${productWidth}px)`;
+
+  // plynulý posun zpět
+  requestAnimationFrame(() => {
+    grid.style.transition = 'transform 0.6s ease';
+    grid.style.transform = 'translateX(0)';
+  });
+}
+function slideNextManual() {
+  slideNext(); // použijeme stejnou funkci jako auto
+}
 
 
 // Recenze zákazníků
