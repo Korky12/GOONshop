@@ -109,3 +109,9 @@ footer p, footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+.rights {
+  text-align: center;
+  background-color:#222831;
+  padding-bottom: 10px;
+  }
