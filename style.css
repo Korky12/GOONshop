@@ -17,6 +17,7 @@
 }
 
 
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #393E46;
@@ -24,6 +25,7 @@ body {
   animation: slidePageUp 0.5s ease-out forwards;
   opacity: 0;
   transform: stranslateY(50px);
+  overflow-x: hidden;
 }
 
 /* HLAVICKA */
@@ -100,58 +102,60 @@ body {
 .products {
   text-align: center;
   padding: 40px 20px;
-  padding-top: 5px;
+  padding-top: 20pxpx;
 }
 
-/* Kontejner s produkty */
+/* Wrapper pro produkty */
+.product-wrapper {
+  overflow: hidden; 
+  margin: 0 auto;
+  max-width: 1150px; /* 350*3 + 30*2 */
+}
+
+/* Grid produktů */
 .product-grid {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
   gap: 30px;
-  padding: 40px 20px;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
-/* Každý produkt (čtverec s rámečkem) */
+/* Každý produkt */
 .product {
-  width: 350px;              /* šířka čtverce */
-  height: 350px;             /* výška čtverce */
-  background-color: #f0f0f0; /* barva pozadí */
-  border: 3px solid black;   /* silný černý okraj */
-  border-radius: 10px;       /* zaoblení rohů (volitelné) */
+  width: 350px;
+  height: 350px;
+  background-color: #f0f0f0;
+  border: 3px solid black;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;          /* schová přesahy obrázku */
-  transition: transform 0.3s ease;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: transform 0.5s ease-in-out;
 }
 
-/* Efekt při najetí myší */
+/* Hover efekt */
 .product:hover {
-  transform: scale(1.10);
+  transform: scale(1.05);
 }
 
-/* Obrázek uvnitř čtverce */
+/* Obrázek uvnitř */
 .product img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ořízne obrázek, aby vyplnil čtverec */
+  object-fit: cover;
   border-radius: 8px;
 }
 
-/* Skryj text pod obrázkem */
+/* Text pod obrázkem */
 .product p {
   display: none;
 }
 
-
-.product p {
-  margin-top: 10px;
-  font-weight: 500;
-}
-
+/* Tlačítko Další sortiment */
 .more-btn {
-  font: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #dbdbdb;
   border: none;
   padding: 20px 35px;
@@ -160,6 +164,7 @@ body {
   font-weight: 600;
   font-size: large;
   transition: 0.3s;
+  margin-top: 20px;
 }
 
 .more-btn:hover {
@@ -167,6 +172,28 @@ body {
   color: #fff;
 }
 
+/* ===== MOBIL ===== */
+@media (max-width: 768px) {
+  .product-wrapper {
+    max-width: 350px;  /* přesně jeden produkt */
+  }
+
+  .product-grid {
+    justify-content: flex-start; /* začátek gridu */
+    gap: 40px;                    /* žádná mezera */
+
+  }
+
+  .product {
+    width: 350px;
+    height: 350px; /* čtverec */
+  }
+}
+
+
+
+
+/* RECENZE */
 .reviews-box {
   background: #222831;
   color: #fff;

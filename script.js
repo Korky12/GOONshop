@@ -1,13 +1,27 @@
-// Scroll na sekci "O nás"
-function scrollToSection(id) {
-  const section = document.getElementById(id);
-  if (section) section.scrollIntoView({ behavior: 'smooth' });
+// JS
+const grid = document.querySelector('.product-grid');
+const products = Array.from(document.querySelectorAll('.product'));
+const productWidth = 350 + 30; // šířka + gap
+let index = 0;
+
+// Nekonečný loop: přesuň první prvek na konec při každém posunu
+function slideNext() {
+  index++;
+  grid.style.transition = 'transform 0.6s ease';
+  grid.style.transform = `translateX(-${index * productWidth}px)`;
+
+  // Po dokončení animace přesuň první produkt na konec a resetuj transform
+  setTimeout(() => {
+    const first = grid.children[0];
+    grid.appendChild(first);
+    grid.style.transition = 'none';
+    grid.style.transform = 'translateX(0)';
+    index = 0;
+  }, 600);
 }
 
-// Akce pro tlačítko "Další sortiment"
-document.querySelector('.more-btn').addEventListener('click', () => {
-  alert('Brzy přidáme další produkty!');
-});
+setInterval(slideNext, 6000);
+
 
 // Recenze zákazníků
 const reviews = [
