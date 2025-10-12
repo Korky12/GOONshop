@@ -59,6 +59,13 @@ body {
   filter: brightness(0.7);
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 /* PRODUKTY */
 .products-container {
             max-width: 1200px;
