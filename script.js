@@ -1,20 +1,23 @@
-// Vytvoření JSON-LD skriptu pro Google
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "GOONshop",
-  "url": "https://goonshop.online",
-  "logo": "https://goonshop.online/images/logo.png",
-  "sameAs": [
-    "https://www.tiktok.com/@goonshop",
-    "https://www.instagram.com/goonshop"
-  ]
-};
+document.addEventListener("DOMContentLoaded", () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GOONshop",
+    "url": "https://goonshop.online",
+    "logo": "https://goonshop.online/images/logo.png",
+    "sameAs": [
+      "https://www.tiktok.com/@goonshop",
+      "https://www.instagram.com/goonshop"
+    ]
+  };
 
-// Vytvoření <script> elementu
-const script = document.createElement('script');
-script.type = 'application/ld+json';
-script.text = JSON.stringify(structuredData);
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify(structuredData);
+
+  document.head.appendChild(script);
+  console.log("✅ JSON-LD strukturovaná data byla přidána do HEAD.");
+});
 
 //
 
