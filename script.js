@@ -1,3 +1,24 @@
+// Vytvoření JSON-LD skriptu pro Google
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "GOONshop",
+  "url": "https://goonshop.online",
+  "logo": "https://goonshop.online/images/logo.png",
+  "sameAs": [
+    "https://www.tiktok.com/@goonshop",
+    "https://www.instagram.com/goonshop"
+  ]
+};
+
+// Vytvoření <script> elementu
+const script = document.createElement('script');
+script.type = 'application/ld+json';
+script.text = JSON.stringify(structuredData);
+
+//
+
+
 const grid = document.querySelector('.product-grid');
 const products = Array.from(document.querySelectorAll('.product'));
 const productWidth = 350 + 30; // šířka produktu + mezera
