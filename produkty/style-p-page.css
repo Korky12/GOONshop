@@ -1,0 +1,305 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes slidePageUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #393E46;
+  color: #dcdbdb;
+  animation: slidePageUp 0.5s ease-out forwards;
+  opacity: 0;
+  transform: stranslateY(50px);
+  overflow-x: hidden;
+  touch-action: pan-y;
+}
+
+/* HLAVICKA */
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222831;
+  padding: 15px 30px;
+  z-index: 1000;
+}
+
+.logo-center img {
+  height: 50px;
+  margin: 10px
+}
+
+.socials img {
+  height: 50px;
+  filter: brightness(0.9);
+  transition: 0.3s;
+  background-color: transparent;
+  border: none;
+}
+.socials img:hover {
+  filter: brightness(1.2);
+}
+
+.socials img:active {
+  filter: brightness(0.7);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #393E46;
+  color: #151515;
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- Produktová stránka ----- */
+.product-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  width: 100%;
+  background: #f7f7f7;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 40px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Levá část – obrázek */
+.product-image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #f5f5f5;
+  object-fit: cover;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Pravá část – informace */
+.product-info {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-info h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.order-button {
+  background: #111;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 26px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.order-button:hover {
+  background: #333;
+}
+
+/* Responsivita */
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-info h1 {
+    font-size: 1.6rem;
+  }
+
+  .product-price {
+    font-size: 1.3rem;
+  }
+}
+
+/* Animace */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------- MOBILNÍ ÚPRAVY ---------------- */
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .product-image {
+    flex: 1 1 250px;
+  }
+
+  .product-image img {
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .product-info {
+    margin-top: 10px;
+    padding: 0;
+    flex: 1 1 250px;
+  }
+
+  .product-info h1 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  .product-price {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .order-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+}
+
+/* Ještě menší obrazovky (např. iPhone SE) */
+@media (max-width: 480px) {
+  .product-container {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .product-image img {
+    max-width: 260px;
+  }
+
+  .product-info h1 {
+    font-size: 1.2rem;
+  }
+
+  .product-description {
+    font-size: 0.85rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: #222831;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.footer-logos img {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-left, .footer-right, .footer-center {
+  text-align: left;
+  min-width: 250px;
+}
+
+footer h3 {
+  margin-top: 14px;
+  margin-bottom: 8px;
+  color: #dfdfdf;
+}
+
+footer p, footer a {
+  font-size: 1rem;
+  color: #dfdfdf;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.rights {
+  text-align: center;
+  background-color:#222831;
+  padding-bottom: 10px;
+  }

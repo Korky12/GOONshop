@@ -84,6 +84,10 @@ h2 {
             grid-template-columns: repeat(4, 1fr);
             gap: 32px;
         }
+        a:link {
+          text-decoration: none;
+          }
+
         .product-card {
             background: #EEEEEE;
             border-radius: 22px;
