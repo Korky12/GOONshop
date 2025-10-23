@@ -93,7 +93,7 @@ footer {
   margin-bottom: 20px;
 }
 
-.footer-left, .footer-right {
+.footer-left, .footer-right, .footer-center {
   text-align: left;
   min-width: 250px;
 }
