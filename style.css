@@ -24,7 +24,7 @@ body {
   color: #dcdbdb;
   animation: slidePageUp 0.5s ease-out forwards;
   opacity: 0;
-  transform: stranslateY(50px);
+  transform: translateY(50px);
   overflow-x: hidden;
   touch-action: pan-y;
 }
