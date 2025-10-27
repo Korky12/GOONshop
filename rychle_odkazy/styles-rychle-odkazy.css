@@ -121,7 +121,7 @@ footer a:hover {
 
 /* OBCHODNÍ PODMÍNKY */
 
-.terms-and-conditions {
+.terms-and-conditions, .privacy-policy, .cookies-policy {
   max-width: 800px;
   margin: 40px auto;
   padding: 0 20px 40px 20px;
@@ -130,13 +130,17 @@ footer a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.terms-and-conditions h1 {
+.terms-and-conditions h1, 
+.privacy-policy h1, 
+.cookies-policy h1 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 2.5rem;
 }
 
-.terms-and-conditions h2 {
+.terms-and-conditions h2,
+.privacy-policy h2, 
+.cookies-policy h2 {
   margin-top: 30px;
   margin-bottom: 15px;
   font-size: 1.8rem;
@@ -144,14 +148,16 @@ footer a:hover {
   padding-bottom: 5px;
 }
 
-.terms-and-conditions p {
+.terms-and-conditions p, 
+.privacy-policy p, 
+.cookies-policy p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 15px;
 }
 
 @media screen {
-    .terms-and-conditions {
+    .terms-and-conditions, .privacy-policy, .cookies-policy {
         padding: 0 40px 40px 40px;
     }
     
