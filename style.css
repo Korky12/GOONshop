@@ -446,3 +446,28 @@ footer a:hover {
   height: 1px;
   overflow: hidden;
 }
+
+
+.error-page {
+  text-align: center;
+  padding: 200px 20px;
+}
+
+.back-home-btn {
+  font-family: 'Poppins', sans-serif;
+  background: #dbdbdb;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: large;
+  transition: 0.3s;
+  margin-top: 20px;
+  color: #000;
+}
+
+.back-home-btn:hover {
+  background: #999;
+  color: #fff;
+}
