@@ -3,10 +3,14 @@ const grid = document.querySelector('.product-grid');
 const products = Array.from(document.querySelectorAll('.product'));
 const productWidth = 350 + 30; // šířka produktu + mezera
 let index = 0;
-let autoSlideTimer; // proměnná pro interval
+let autoSlideTimer; // interval
+let isSliding = false; // zámek animace
 
 // Funkce pro automatický posun
 function slideNext() {
+  if (isSliding) return; // pokud už probíhá animace, ignoruj klik
+  isSliding = true;
+
   index++;
   grid.style.transition = 'transform 0.6s ease';
   grid.style.transform = `translateX(-${index * productWidth}px)`;
@@ -17,6 +21,7 @@ function slideNext() {
     grid.style.transition = 'none';
     grid.style.transform = 'translateX(0)';
     index = 0;
+    isSliding = false; // odemkni po dokončení
   }, 600);
 }
 
@@ -31,6 +36,9 @@ resetTimer();
 
 // Manuální šipky
 function slidePrev() {
+  if (isSliding) return; // zablokuj rychlé kliky
+  isSliding = true;
+
   const last = grid.children[grid.children.length - 1];
   grid.insertBefore(last, grid.children[0]);
   grid.style.transition = 'none';
@@ -42,13 +50,18 @@ function slidePrev() {
     grid.style.transform = 'translateX(0)';
   });
 
-  resetTimer(); // reset časovače po kliknutí
+  setTimeout(() => {
+    isSliding = false; // odemkni po dokončení
+  }, 600);
+
+  resetTimer();
 }
 
 function slideNextManual() {
   slideNext();
-  resetTimer(); // reset časovače po kliknutí
+  resetTimer();
 }
+
 
 
 // Recenze zákazníků
