@@ -3,8 +3,9 @@ const grid = document.querySelector('.product-grid');
 const products = Array.from(document.querySelectorAll('.product'));
 const productWidth = 350 + 30; // šířka produktu + mezera
 let index = 0;
+let autoSlideTimer; // proměnná pro interval
 
-// Automatický posun
+// Funkce pro automatický posun
 function slideNext() {
   index++;
   grid.style.transition = 'transform 0.6s ease';
@@ -19,7 +20,14 @@ function slideNext() {
   }, 600);
 }
 
-setInterval(slideNext, 6000);
+// Funkce pro resetování časovače
+function resetTimer() {
+  clearInterval(autoSlideTimer);
+  autoSlideTimer = setInterval(slideNext, 6000);
+}
+
+// Spuštění časovače
+resetTimer();
 
 // Manuální šipky
 function slidePrev() {
@@ -33,9 +41,13 @@ function slidePrev() {
     grid.style.transition = 'transform 0.6s ease';
     grid.style.transform = 'translateX(0)';
   });
+
+  resetTimer(); // reset časovače po kliknutí
 }
+
 function slideNextManual() {
-  slideNext(); // použijeme stejnou funkci jako auto
+  slideNext();
+  resetTimer(); // reset časovače po kliknutí
 }
 
 
