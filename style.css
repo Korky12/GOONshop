@@ -301,6 +301,99 @@ body {
   color: #00adb5;
   }
 
+
+
+/* mailto link */
+
+/* Sekce newsletteru */
+.email {
+  background-color: #222831;
+  color: #fff;
+  padding: 40px 20px;
+  max-width: 500px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.email h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.email p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+/* Formulář */
+.email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Pole pro email */
+.email-form input[type="email"] {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Checkbox souhlasu */
+.email-form label.consent {
+  font-size: 0.9rem;
+  text-align: left;
+  color: #ccc;
+}
+
+.email-form label.consent input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Odkaz */
+.email-form a {
+  color: #4da6ff;
+  text-decoration: none;
+}
+
+.email-form a:hover {
+  text-decoration: underline;
+}
+
+/* Tlačítko */
+.email-form button {
+  background-color: #4da6ff;
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.email-form button:hover {
+  background-color: #3399ff;
+}
+
+/* Responzivní */
+@media (max-width: 600px) {
+  .email {
+    padding: 30px 15px;
+  }
+
+  .email h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
 /* FOOTER */
 footer {
   display: flex;
