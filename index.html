@@ -29,23 +29,26 @@
 </head>
 
 <body>
-  <!-- Offscreen-->
-  <nav id="sitelinks-nav" class="offscreen" aria-label="Sitelinks">
-  <a href="products.html">Produkty</a>
-  <a href="rychle_odkazy/about.html">O nás</a>
-</nav>
+
 
   <!-- HLAVICKA -->
   <header class="header">
-    <button class="about-btn" onclick="window.location.href='rychle_odkazy/about.html'">O Nás</button>
-    <div class="logo-center">
+    <div class="logo">
       <img src="images/logo.png" alt="Goonshop Logo">
     </div>
-    <div class="socials">
-      <a href="https://www.instagram.com/goonshop67?utm_source=ig_web_button_share_sheet&igsh=dmt5NzNnMGhsNDJt" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-      <a href="https://www.tiktok.com/@goonshop_?is_from_webapp=1&sender_device=pc" target="_blank"><img src="images/tiktok.png" alt="TikTok"></a>
-    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="/products.html">Produkty</a>
+      <a href="#Recenze">Recenze</a>
+      <a href="#Newsletter">Newsletter</a>
+      <a href="#kontakt">Kontakt</a>
+      <div class="socials">
+        <a href="https://www.instagram.com/goonshop67?utm_source=ig_web_button_share_sheet&igsh=dmt5NzNnMGhsNDJt" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@goonshop_?is_from_webapp=1&sender_device=pc" target="_blank"><img src="images/tiktok.png" alt="TikTok"></a>
+      </div>
+    </nav>
+    <div class="hamburger" id="hamburger">☰</div>
   </header>
+
 
   <!-- CITÁT -->
   <section class="quote">
@@ -91,7 +94,7 @@
   </main>
 
   <!-- RECENZE -->
-  <section class="reviews-box">
+  <section id="Recenze" class="reviews-box">
     <h2>Recenze zákazníků</h2>
       <div class="review-content">
         <button class="arrow-btn left" onclick="prevReview()">&#8592;</button>
@@ -105,7 +108,7 @@
 
   <!---Sběr emailu-->
 
-<section class="email">
+<section id="Newsletter" class="email">
   <h2>Chceš být informován o novinkách a slevách?</h2>
   <p>Přihlas se k odběru našeho newsletteru!</p>
   <form action="https://formspree.io/f/mayvdgwl" method="POST" class="email-form">
