@@ -27,6 +27,14 @@ body {
   touch-action: pan-y;
 }
 
+a {
+  text-decoration: none;
+  color: #00ADB5;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 /* HLAVICKA */
 .header {
   position: sticky;
@@ -184,7 +192,3 @@ footer a:hover {
   margin-bottom: 20px;
 }
 
-.contact a {
-  color: #00ADB5;
-  text-decoration: none;
-}
