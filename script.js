@@ -121,3 +121,17 @@ function resetAutoSlide() {
 
 // Spustí se automatické přepínání po načtení stránky
 startAutoSlide();
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Zavření menu po kliknutí na odkaz
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
