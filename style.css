@@ -112,6 +112,10 @@ body {
     text-align: center;
     display: block;
   }
+  ¨
+  .socials {
+    gap: 10px;
+  }
 
   .hamburger {
     display: block;
@@ -146,7 +150,6 @@ body {
   display: flex;
   justify-content: center; /* zarovná vodorovně na střed */
   align-items: center; /* zarovná svisle na střed */
-  gap: 10px; /* mezera mezi ikonami */
   flex-wrap: wrap;
 }
 
