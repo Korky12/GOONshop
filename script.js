@@ -125,6 +125,7 @@ startAutoSlide();
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
+// Otevření / zavření menu po kliknutí na hamburger
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
@@ -134,4 +135,14 @@ navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('active');
   });
+});
+
+// Zavření menu při kliknutí mimo
+document.addEventListener('click', (e) => {
+  const isClickInsideMenu = navLinks.contains(e.target);
+  const isClickOnHamburger = hamburger.contains(e.target);
+  
+  if (!isClickInsideMenu && !isClickOnHamburger) {
+    navLinks.classList.remove('active');
+  }
 });
