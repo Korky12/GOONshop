@@ -16,13 +16,7 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
-section {
-  scroll-margin-top: 160px; /* výška tvého sticky headeru */
-}
 
 
 body {
@@ -48,8 +42,17 @@ body {
   z-index: 1000;
 }
 
+/* navbar */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 160px; /* výška tvého sticky headeru */
+}
 
 /* --- Desktop --- */
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -80,7 +83,6 @@ body {
   cursor: pointer;
 }
 
-/* 📱 Responsivita */
 /* 📱 Responsivita */
 @media (max-width: 768px) {
   .nav-links {
@@ -167,6 +169,8 @@ body {
 .socials img:active {
   filter: brightness(0.7);
 }
+/* ----------------KONEC HEADER----------------- */
+
 
 /* CITÁT */
 .quote {
@@ -185,7 +189,8 @@ body {
   color: #d6d6d6;
 }
 
-/* PRODUKTY */
+
+/* ---------------------PRODUKTY-------------------------------- */
 .products {
   text-align: center;
   padding: 40px 20px;
@@ -311,10 +316,10 @@ body {
   }
 }
 
+/* -----------------------KONEC PRODUCT------------------------------------ */
 
 
-
-/* RECENZE */
+/* ---------------------RECENZE----------------------------------- */
 .reviews-box {
   background: #222831;
   color: #fff;
@@ -383,10 +388,10 @@ body {
   color: #00adb5;
   }
 
+/*---------------------KONEC RECENZE------------------------------- */
 
 
-
-/* Sekce newsletteru */
+/* --------------------------Sekce newsletteru ---------------------------*/
 .email {
   background-color: #222831;
   color: #fff;
@@ -474,9 +479,9 @@ body {
     font-size: 1.5rem;
   }
 }
+/* ------------------------------------------------KONEC NEWSLETTER---------------------------------- */
 
-
-/* FOOTER */
+/*---------------------------------------------- FOOTER.-------------------------------------------- */
 footer {
   display: flex;
   justify-content: space-around;
@@ -529,7 +534,9 @@ footer a:hover {
   padding-bottom: 10px;
   }
 
+/*-----------------------------KONEC FOOTER------------------------------------- */
 
+/* -----------------------ERROR PAGE-------------------------- */
 
 .error-page {
   text-align: center;
