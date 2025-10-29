@@ -466,7 +466,7 @@ body {
 /* Responzivní */
 @media (max-width: 600px) {
   .email {
-    margin: 10px;
+    margin: 20px;
     padding: 30px 15px;
   }
 
