@@ -75,8 +75,8 @@ const reviews = [
     author: "- Admin"
   },
   {
-    text: "„Originální designy, doporučuji všem goonerům!“",
-    author: "- Admin"
+    text: "„To je dobré jak zmrd“",
+    author: "- Tomáš Ilčík"
   }
 ];
 
