@@ -67,8 +67,8 @@ function slideNextManual() {
 // Recenze zákazníků
 const reviews = [
   {
-    text: "„Skvělý obchod, rychlé dodání a super komunikace!“",
-    author: "- Admin"
+    text: "„Super firma, příjemný personál, kvalitní produkty“",
+    author: "- Radim V."
   },
   {
     text: "„Kvalitní produkty, určitě objednám znovu.“",
