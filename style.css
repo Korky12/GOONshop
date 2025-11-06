@@ -65,10 +65,11 @@ section {
   margin: 0 10px;
   font-weight: 500;
   transition: color 0.3s;
+  font-size: 18px;
 }
 
 .logo img {
-  height: 50px;
+  height: 70px;
   margin: 10px
 }
 
@@ -121,6 +122,10 @@ section {
 
   .hamburger {
     display: block;
+  }
+  .logo img {
+    height: 50px;
+    margin: 5px
   }
 }
 

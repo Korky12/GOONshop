@@ -20,22 +20,209 @@
         </div>
     </header>
 
-    <main class="product-page">
-      <div class="product-container">
-        <div class="product-image">
-          <img src="../images/trika/Certifikovaný Gooner.png" alt="Certifikovaný gooner">
-        </div>
+<!-- MODÁLNÍ OKNO -->
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Zvol způsob objednávky</h2>
+    <div class="order-options">
+      <button class="paypal-btn" id="paypalBtn">
+        Objednat přes PayPal
+      </button>
+      <button class="invoice-btn" id="invoiceBtn">
+        Objednat na fakturu e-mailem
+      </button>
+    </div>
+  </div>
+</div>
 
-        <div class="product-info">
-          <h1>Certifikovaný Gooner</h1>
-          <p class="product-description">
-            Tvoje licence na gooning je právě schválená.
-          </p>
-          <p class="product-price">---Kč</p>
-          <button class="order-button">Objednat</button>
-        </div>
-      </div>
-    </main>
+<style>
+  /* MODÁLNÍ OKNO */
+  .modal {
+    display: none; 
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.3s ease;
+  }
+
+  .modal-content h2 {
+    margin-bottom: 20px;
+  }
+
+  .order-options button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .paypal-btn {
+    background-color: #0070ba;
+    color: white;
+  }
+
+  .paypal-btn:hover {
+    background-color: #005c9c;
+  }
+
+  .invoice-btn {
+    background-color: #f1f1f1;
+  }
+
+  .invoice-btn:hover {
+    background-color: #ddd;
+  }
+
+  .close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+  }
+
+  .close:hover {
+    color: black;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+</style>
+
+<main class="product-page">
+  <div class="product-container">
+    <div class="product-image">
+      <img src="../images/trika/Certifikovaný Gooner.png" alt="Certifikovaný gooner">
+    </div>
+
+    <div class="product-info">
+      <h1>Certifikovaný Gooner</h1>
+      <p class="product-description">
+        Tvoje licence na gooning je právě schválená.
+      </p>
+      <p class="product-price">199 Kč</p>
+      <button class="order-button">Objednat</button>
+    </div>
+  </div>
+</main>
+
+<!-- Pop-up -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <h2>Zvol způsob platby</h2>
+    <button id="paypalBtn">Zaplatit přes PayPal</button>
+    <button id="invoiceBtn">Na fakturu přes e-mail</button>
+    <button id="closePopup">Zavřít</button>
+  </div>
+</div>
+
+<style>
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  }
+
+  .popup-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .popup-content button:hover {
+    background: #333;
+  }
+</style>
+
+<script>
+  const orderButton = document.querySelector('.order-button');
+  const popup = document.getElementById('popup');
+  const closePopup = document.getElementById('closePopup');
+  const paypalBtn = document.getElementById('paypalBtn');
+  const invoiceBtn = document.getElementById('invoiceBtn');
+
+  // otevře popup po kliknutí na objednat
+  orderButton.addEventListener('click', () => {
+    popup.style.display = 'flex';
+  });
+
+  // zavře popup
+  closePopup.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+
+  // kliknutí mimo okno taky zavře popup
+  window.addEventListener('click', (e) => {
+    if (e.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+
+  // zpracování PayPalu
+  function parsePriceCZK() {
+    const el = document.querySelector('.product-price');
+    if (!el) return '100';
+    const text = el.textContent.replace(/\s+/g,'').replace('Kč','').replace('CZK','').replace(',','.');
+    const num = parseFloat(text);
+    return isNaN(num) ? '100' : Math.round(num);
+  }
+
+  paypalBtn.addEventListener('click', () => {
+    const amount = parsePriceCZK();
+    const handle = 'TVŮJ_PAYPAL_HANDLE'; // ← sem napiš svoje PayPal.Me jméno (bez https://paypal.me/)
+    const link = `https://paypal.me/${encodeURIComponent(handle)}/${amount}CZK`;
+    window.open(link, '_blank');
+  });
+
+  // kliknutí na fakturu – otevře e-mail
+  invoiceBtn.addEventListener('click', () => {
+    const subject = encodeURIComponent("Objednávka produktu Certifikovaný Gooner");
+    const body = encodeURIComponent("Dobrý den,\nchtěl(a) bych objednat produkt Certifikovaný Gooner.\n\nFakturační údaje:\nJméno:\nAdresa:\nIČO (pokud máte):\n\nDěkuji.");
+    window.location.href = `mailto:tvoje@email.cz?subject=${subject}&body=${body}`;
+  });
+</script>
+
+
+    
 
 <!-- FOOTER -->
   <footer>
