@@ -204,6 +204,7 @@ section {
 
 /* Grid produktů */
 .product-grid {
+  width: max-content;
   display: flex;
   gap: 30px;
   flex-wrap: nowrap;
