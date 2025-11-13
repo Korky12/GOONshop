@@ -34,10 +34,40 @@
             Great opinion obviously nonsense - Když ti někdo řekne, že má jiný názor, ukaž na tričko a nech ho číst mezi řádky
           </p>
           <p class="product-price">---Kč</p>
-          <button class="order-button">Objednat</button>
+        <button class="order-button" id="orderEmailBtn">Objednat</button>
         </div>
       </div>
     </main>
+
+
+  <!-- POPUP OKNO -->
+  <div id="emailPopup" class="popup">
+    <div class="popup-content">
+      <h3>Teď vás přesměrujeme do e-mailu, kde dokončíte objednávku.</h3>
+      <a
+        href="mailto:goon.shop67@gmail.com
+?subject=Objednávka%20produktu%20Keep%20distance%20fat%20bitches
+&body=Dobrý%20den,%0Achtěl(a)%20bych%20objednat%20produkt%20Keep%20distance%20fat%20bitches.%0A%0AMnožství:%201%0ACena:%20199%20Kč%0AVelikost:%20%0AAdresa:%20%0APoznámka:%20%0A%0APotvrzuji,%20že%20se%20jedná%20o%20závaznou%20objednávku.">
+        <button id="confirmEmail">OK</button>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const orderBtn = document.getElementById("orderEmailBtn");
+    const popup = document.getElementById("emailPopup");
+    const confirmEmail = document.getElementById("confirmEmail");
+
+    orderBtn.addEventListener("click", () => {
+      popup.style.display = "flex";
+    });
+
+    // kliknutí mimo popup zavře okno
+    window.addEventListener("click", (e) => {
+      if (e.target === popup) popup.style.display = "none";
+    });
+  </script>
+
 <!-- FOOTER -->
   <footer>
     <div class="footer-logos">
@@ -66,6 +96,6 @@
     </div>
   </footer>
   <p class="rights">all rights reserved © 2025 Goonshop</p>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

@@ -141,10 +141,22 @@ navLinks.querySelectorAll('a').forEach(link => {
 document.addEventListener('click', (e) => {
   const isClickInsideMenu = navLinks.contains(e.target);
   const isClickOnHamburger = hamburger.contains(e.target);
-  
+
   if (!isClickInsideMenu && !isClickOnHamburger) {
     navLinks.classList.remove('active');
   }
 });
 
 
+const orderBtn = document.getElementById("orderEmailBtn");
+const popup = document.getElementById("emailPopup");
+const confirmEmail = document.getElementById("confirmEmail");
+
+orderBtn.addEventListener("click", () => {
+  popup.style.display = "flex";
+});
+
+// kliknutí mimo popup zavře okno
+window.addEventListener("click", (e) => {
+  if (e.target === popup) popup.style.display = "none";
+});
