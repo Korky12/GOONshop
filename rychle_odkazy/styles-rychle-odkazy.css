@@ -22,7 +22,7 @@ body {
   color: #dcdbdb;
   animation: slidePageUp 0.5s ease-out forwards;
   opacity: 0;
-  transform: stranslateY(50px);
+  transform: translateY(50px);
   overflow-x: hidden;
   touch-action: pan-y;
 }
@@ -35,6 +35,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 /* HLAVICKA */
 .header {
   position: sticky;
@@ -49,7 +50,7 @@ a:hover {
 
 .logo-center img {
   height: 50px;
-  margin: 10px
+  margin: 10px;
 }
 
 .socials img {
@@ -59,6 +60,7 @@ a:hover {
   background-color: transparent;
   border: none;
 }
+
 .socials img:hover {
   filter: brightness(1.2);
 }
@@ -67,6 +69,7 @@ a:hover {
   filter: brightness(0.7);
 }
 
+/* ABOUT */
 .about h2 {
   text-align: center;
   margin: 40px 20px 20px 20px;
@@ -82,6 +85,7 @@ a:hover {
   text-align: center;
   margin-bottom: 40px;
 }
+
 /* FOOTER */
 footer {
   display: flex;
@@ -122,13 +126,11 @@ footer a:hover {
 
 .rights {
   text-align: center;
-  background-color:#222831;
+  background-color: #222831;
   padding-bottom: 10px;
-  }
-
+}
 
 /* OBCHODNÍ PODMÍNKY */
-
 .terms-and-conditions, .privacy-policy, .cookies-policy {
   max-width: 800px;
   margin: 40px auto;
@@ -165,10 +167,9 @@ footer a:hover {
 }
 
 @media screen {
-    .terms-and-conditions, .privacy-policy, .cookies-policy {
-        padding: 0 40px 40px 40px;
-    }
-    
+  .terms-and-conditions, .privacy-policy, .cookies-policy {
+    padding: 0 40px 40px 40px;
+  }
 }
 
 .contact {
@@ -192,3 +193,82 @@ footer a:hover {
   margin-bottom: 20px;
 }
 
+/* ======================================
+   POPUP OKNO – vždy uprostřed i na mobilu
+   ====================================== */
+
+.popup {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.popup.active {
+  display: flex;
+}
+
+.popup-content {
+  background-color: #eeeeee;
+  color: #222;
+  padding: 25px 20px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.3s ease;
+  position: relative;
+}
+
+/* Zavírací křížek */
+.popup-content::after {
+  content: "✕";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: #555;
+  cursor: pointer;
+}
+
+/* Animace */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tlačítko v popupu */
+#confirmEmail {
+  margin-top: 15px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#confirmEmail:hover {
+  background: #444;
+}
+
+/* Responsivní přizpůsobení */
+@media (max-width: 480px) {
+  .popup-content {
+    width: 85%;
+    font-size: 0.95rem;
+    padding: 20px 15px;
+  }
+}
