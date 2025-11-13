@@ -148,7 +148,6 @@ document.addEventListener('click', (e) => {
 });
 
 
-// Objednávkový formulář přes e-mail s popup oknem
 const orderBtn = document.getElementById("orderEmailBtn");
 const popup = document.getElementById("emailPopup");
 const confirmEmail = document.getElementById("confirmEmail");
