@@ -18,8 +18,8 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #393E46;
+  font-family: "Poppins", sans-serif;
+  background-color: #393e46;
   color: #dcdbdb;
   animation: slidePageUp 0.5s ease-out forwards;
   opacity: 0;
@@ -42,7 +42,7 @@ body {
 
 .logo-center img {
   height: 50px;
-  margin: 10px
+  margin: 10px;
 }
 
 .socials img {
@@ -68,11 +68,9 @@ h2 {
   text-align: center;
 }
 
-
-
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #393E46;
+  font-family: "Poppins", sans-serif;
+  background-color: #393e46;
   color: #151515;
   margin: 0;
   padding: 0;
@@ -201,8 +199,12 @@ body {
 }
 
 @keyframes fadeInPopup {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleUp {
@@ -215,7 +217,6 @@ body {
     opacity: 1;
   }
 }
-
 
 /* ---------------- MOBILNÍ ÚPRAVY ---------------- */
 @media (max-width: 768px) {
@@ -289,10 +290,6 @@ body {
     font-size: 1rem;
   }
 }
-
-
-
-
 
 /* FOOTER */
 footer {

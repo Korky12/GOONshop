@@ -1,101 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keep distance fat bitches</title>
-    <link rel="stylesheet" href="style-p-page.css">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style-p-page.css" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- HLAVICKA -->
     <header class="header">
-        <div class="logo-center">
-            <a href="../index.html"><img src="../images/logo.png" alt="Goonshop Logo"></a>
-        </div>
-        <div class="socials">
-            <a href="https://www.instagram.com/goonshop67?utm_source=ig_web_button_share_sheet&igsh=dmt5NzNnMGhsNDJt" target="_blank"><img src="../images/instagram.png" alt="Instagram"></a>
-            <a href="https://www.tiktok.com/@goonshop_?is_from_webapp=1&sender_device=pc" target="_blank"><img src="../images/tiktok.png" alt="TikTok"></a>
-        </div>
+      <div class="logo-center">
+        <a href="../index.html"
+          ><img src="../images/logo.png" alt="Goonshop Logo"
+        /></a>
+      </div>
+      <div class="socials">
+        <a
+          href="https://www.instagram.com/goonshop67?utm_source=ig_web_button_share_sheet&igsh=dmt5NzNnMGhsNDJt"
+          target="_blank"
+          ><img src="../images/instagram.png" alt="Instagram"
+        /></a>
+        <a
+          href="https://www.tiktok.com/@goonshop_?is_from_webapp=1&sender_device=pc"
+          target="_blank"
+          ><img src="../images/tiktok.png" alt="TikTok"
+        /></a>
+      </div>
     </header>
 
-    
     <main class="product-page">
       <div class="product-container">
         <div class="product-image">
-          <img src="../images/trika/Keep distance.png" alt="Keep distance">
+          <img src="../images/trika/Keep distance.png" alt="Keep distance" />
         </div>
 
         <div class="product-info">
           <h1>Keep distance fat bitches</h1>
           <p class="product-description">
-            Dejte vědět všem dámám v okolí, že kila navíc nejsou vaší prioritou :)
-            Great opinion obviously nonsense - Když ti někdo řekne, že má jiný názor, ukaž na tričko a nech ho číst mezi řádky
+            Dejte vědět všem dámám v okolí, že kila navíc nejsou vaší prioritou
+            :) Great opinion obviously nonsense - Když ti někdo řekne, že má
+            jiný názor, ukaž na tričko a nech ho číst mezi řádky
           </p>
           <p class="product-price">250 Kč</p>
-        <button class="order-button" id="orderEmailBtn">Objednat</button>
+          <button class="order-button" id="orderEmailBtn">Objednat</button>
         </div>
       </div>
     </main>
 
-
-  <!-- POPUP OKNO -->
-  <div id="emailPopup" class="popup">
-    <div class="popup-content">
-      <h3>Teď vás přesměrujeme do e-mailu, kde dokončíte objednávku.</h3>
-      <a
-        href="mailto:goon.shop67@gmail.com
+    <!-- POPUP OKNO -->
+    <div id="emailPopup" class="popup">
+      <div class="popup-content">
+        <h3>Teď vás přesměrujeme do e-mailu, kde dokončíte objednávku.</h3>
+        <a
+          href="mailto:goon.shop67@gmail.com
 ?subject=Objednávka%20produktu%20Keep%20distance%20fat%20bitches
-&body=Dobrý%20den,%0Achtěl(a)%20bych%20objednat%20produkt%20Keep%20distance%20fat%20bitches.%0A%0AMnožství:%201%0AVelikost:%20%0AAdresa:%20%0APoznámka:%20%0A%0APotvrzuji,%20že%20se%20jedná%20o%20závaznou%20objednávku.">
-        <button class="confirmButton" id="confirmEmail">OK</button>
-      </a>
+&body=Dobrý%20den,%0Achtěl(a)%20bych%20objednat%20produkt%20Keep%20distance%20fat%20bitches.%0A%0AMnožství:%201%0AVelikost:%20%0AAdresa:%20%0APoznámka:%20%0A%0APotvrzuji,%20že%20se%20jedná%20o%20závaznou%20objednávku."
+        >
+          <button class="confirmButton" id="confirmEmail">OK</button>
+        </a>
+      </div>
     </div>
-  </div>
 
-  <script>
-    const orderBtn = document.getElementById("orderEmailBtn");
-    const popup = document.getElementById("emailPopup");
-    const confirmEmail = document.getElementById("confirmEmail");
+    <script>
+      const orderBtn = document.getElementById("orderEmailBtn");
+      const popup = document.getElementById("emailPopup");
+      const confirmEmail = document.getElementById("confirmEmail");
 
-    orderBtn.addEventListener("click", () => {
-      popup.style.display = "flex";
-    });
+      orderBtn.addEventListener("click", () => {
+        popup.style.display = "flex";
+      });
 
-    // kliknutí mimo popup zavře okno
-    window.addEventListener("click", (e) => {
-      if (e.target === popup) popup.style.display = "none";
-    });
-  </script>
+      // kliknutí mimo popup zavře okno
+      window.addEventListener("click", (e) => {
+        if (e.target === popup) popup.style.display = "none";
+      });
+    </script>
 
-<!-- FOOTER -->
-  <footer>
-    <div class="footer-logos">
-      <img src="../images/logo.png" alt="Goonshop logo">
-      <a href="https://jaczech.org/ja-studentska-firma/" target="_blank"><img src="../images/ja_czech.png" alt="Ja_czech"></a>
-    </div>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-logos">
+        <img src="../images/logo.png" alt="Goonshop logo" />
+        <a href="https://jaczech.org/ja-studentska-firma/" target="_blank"
+          ><img src="../images/ja_czech.png" alt="Ja_czech"
+        /></a>
+      </div>
       <div class="footer-left">
-      <h3>Goonshop</h3>
-      <p><a href="../rychle_odkazy/contact.html"><strong>Kontaktujte nás</strong></a></p>
-      <p><strong>Email: </strong> <a href="mailto:goon.shop67@gamil.com">goon.shop67@gmail.com</a></p>
-      <p><strong>Napište nám: </strong> <a href="https://g.page/r/CdJlvdpHgCTjEBM/review" target="_blank" rel="noopener noreferrer">recenze</a></p>
-    </div>
+        <h3>Goonshop</h3>
+        <p>
+          <a href="../rychle_odkazy/contact.html"
+            ><strong>Kontaktujte nás</strong></a
+          >
+        </p>
+        <p>
+          <strong>Email: </strong>
+          <a href="mailto:goon.shop67@gamil.com">goon.shop67@gmail.com</a>
+        </p>
+        <p>
+          <strong>Napište nám: </strong>
+          <a
+            href="https://g.page/r/CdJlvdpHgCTjEBM/review"
+            target="_blank"
+            rel="noopener noreferrer"
+            >recenze</a
+          >
+        </p>
+      </div>
 
-    <div class="footer-center">
-      <h3>Rychlé odkazy</h3>
-      <p><a href="../rychle_odkazy/obchodni_podminky.html">Obchodní podmínky</a></p>
-      <p><a href="../rychle_odkazy/privacy_policy.html">Privacy Policy</a></p>
-      <p><a href="../rychle_odkazy/cookies.html">Cookies</a></p>
-      <p><a href="../rychle_odkazy/about.html">O nás</a></p>  
-    </div>
+      <div class="footer-center">
+        <h3>Rychlé odkazy</h3>
+        <p>
+          <a href="../rychle_odkazy/obchodni_podminky.html"
+            >Obchodní podmínky</a
+          >
+        </p>
+        <p><a href="../rychle_odkazy/privacy_policy.html">Privacy Policy</a></p>
+        <p><a href="../rychle_odkazy/cookies.html">Cookies</a></p>
+        <p><a href="../rychle_odkazy/about.html">O nás</a></p>
+      </div>
 
-    <div class="footer-right">
-      <h3>Sledujte nás</h3>
-      <p><a href="https://www.tiktok.com/@goonshop_?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a></p>
-      <p><a href="https://www.instagram.com/goonshop67?utm_source=ig_web_button_share_sheet&igsh=dmt5NzNnMGhsNDJt" target="_blank">Instagram</a></p>
-    </div>
-  </footer>
-  <p class="rights">all rights reserved © 2025 Goonshop</p>
-  <script src="../script.js"></script>
-</body>
+      <div class="footer-right">
+        <h3>Sledujte nás</h3>
+        <p>
+          <a
+            href="https://www.tiktok.com/@goonshop_?is_from_webapp=1&sender_device=pc"
+            target="_blank"
+            >TikTok</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.instagram.com/goonshop67?utm_source=ig_web_button_share_sheet&igsh=dmt5NzNnMGhsNDJt"
+            target="_blank"
+            >Instagram</a
+          >
+        </p>
+      </div>
+    </footer>
+    <p class="rights">all rights reserved © 2025 Goonshop</p>
+    <script src="../script.js"></script>
+  </body>
 </html>
