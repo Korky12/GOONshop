@@ -17,8 +17,8 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #393E46;
+  font-family: "Poppins", sans-serif;
+  background-color: #393e46;
   color: #dcdbdb;
   animation: slidePageUp 0.5s ease-out forwards;
   opacity: 0;
@@ -41,7 +41,7 @@ body {
 
 .logo-center img {
   height: 50px;
-  margin: 10px
+  margin: 10px;
 }
 
 .socials img {
@@ -68,72 +68,72 @@ h2 {
 
 /* PRODUKTY */
 .products-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-            font-family: 'Poppins', Arial, sans-serif;
-        }
-        .products-container h2 {
-            text-align: center;
-            margin-bottom: 32px;
-            font-weight: 600;
-            font-size: 2rem;
-        }
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
-        }
-        a:link {
-          text-decoration: none;
-          }
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: "Poppins", Arial, sans-serif;
+}
+.products-container h2 {
+  text-align: center;
+  margin-bottom: 32px;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+a:link {
+  text-decoration: none;
+}
 
-        .product-card {
-            background: #EEEEEE;
-            border-radius: 22px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-            padding: 24px 18px 18px 18px;
-            text-align: center;
-            transition: transform 0.2s cubic-bezier(.4,0,.2,1), box-shadow 0.2s;
-            cursor: pointer;
-        }
-        .product-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
-        }
-        .product-card img {
-            width: 100%;
-            max-width: 160px;
-            height: auto;
-            border-radius: 14px;
-            margin-bottom: 16px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-        }
-        .product-card h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #222;
-        }
-        .product-card .price {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: #2e7d32;
-            margin-bottom: 0;
-        }
-        @media (max-width: 1000px) {
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        @media (max-width: 600px) {
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-            .products-container h2 {
-                font-size: 1.3rem;
-            }
-        }
+.product-card {
+  background: #eeeeee;
+  border-radius: 22px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 24px 18px 18px 18px;
+  text-align: center;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s;
+  cursor: pointer;
+}
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+}
+.product-card img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+.product-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+.product-card .price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2e7d32;
+  margin-bottom: 0;
+}
+@media (max-width: 1000px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .products-container h2 {
+    font-size: 1.3rem;
+  }
+}
 
 /* FOOTER */
 footer {
@@ -154,7 +154,9 @@ footer {
   margin-bottom: 20px;
 }
 
-.footer-left, .footer-right, .footer-center {
+.footer-left,
+.footer-right,
+.footer-center {
   text-align: left;
   min-width: 250px;
 }
@@ -164,7 +166,8 @@ footer h3 {
   margin-bottom: 8px;
 }
 
-footer p, footer a {
+footer p,
+footer a {
   font-size: 1rem;
   color: #dfdfdf;
   text-decoration: none;
@@ -176,6 +179,6 @@ footer a:hover {
 
 .rights {
   text-align: center;
-  background-color:#222831;
+  background-color: #222831;
   padding-bottom: 10px;
-  }
+}

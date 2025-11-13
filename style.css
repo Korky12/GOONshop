@@ -16,12 +16,9 @@
   }
 }
 
-
-
-
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #393E46;
+  font-family: "Poppins", sans-serif;
+  background-color: #393e46;
   color: #dcdbdb;
   animation: slidePageUp 0.5s ease-out forwards;
   opacity: 0;
@@ -70,7 +67,7 @@ section {
 
 .logo img {
   height: 70px;
-  margin: 10px
+  margin: 10px;
 }
 
 .nav-links a:hover {
@@ -93,7 +90,7 @@ section {
     flex-direction: column;
     background: #222831;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     padding: 0;
     overflow: hidden;
     max-height: 0;
@@ -115,8 +112,7 @@ section {
     text-align: center;
     display: block;
   }
-  ¨
-  .socials {
+  ¨ .socials {
     gap: 10px;
   }
 
@@ -125,10 +121,9 @@ section {
   }
   .logo img {
     height: 50px;
-    margin: 5px
+    margin: 5px;
   }
 }
-
 
 .about-btn {
   background: #fff;
@@ -138,7 +133,7 @@ section {
   cursor: pointer;
   border-radius: 6px;
   transition: 0.3s;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   color: #000;
 }
@@ -150,7 +145,7 @@ section {
 
 .logo-center img {
   height: 50px;
-  margin: 10px
+  margin: 10px;
 }
 
 .socials {
@@ -176,7 +171,6 @@ section {
 }
 /* ----------------KONEC HEADER----------------- */
 
-
 /* CITÁT */
 .quote {
   text-align: center;
@@ -194,7 +188,6 @@ section {
   color: #d6d6d6;
 }
 
-
 /* ---------------------PRODUKTY-------------------------------- */
 .products {
   text-align: center;
@@ -204,7 +197,7 @@ section {
 
 /* Wrapper pro produkty */
 .product-wrapper {
-  overflow: hidden; 
+  overflow: hidden;
   margin: 0 auto;
   max-width: 1150px; /* 350*3 + 30*2 */
 }
@@ -262,9 +255,9 @@ section {
   font-size: 2rem;
   background-color: #222831; /* barva rámečku */
   border: 2px solid #f0f0f0; /* barva okraje */
-  border-radius: 15px;       /* zaoblení rohů */
-  width: 60px;               /* šířka rámečku */
-  height: 60px;              /* výška rámečku */
+  border-radius: 15px; /* zaoblení rohů */
+  width: 60px; /* šířka rámečku */
+  height: 60px; /* výška rámečku */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -276,14 +269,13 @@ section {
 /* Hover efekt */
 .arrow:hover {
   background-color: #102a33; /* pozadí se změní */
-  color: #fff;               /* šipka se změní na bílou */
-  transform: scale(1.1);     /* mírné zvětšení */
+  color: #fff; /* šipka se změní na bílou */
+  transform: scale(1.1); /* mírné zvětšení */
 }
-
 
 /* Tlačítko Další sortiment */
 .more-btn {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #dbdbdb;
   border: none;
   padding: 20px 35px;
@@ -304,15 +296,13 @@ section {
 
 /* ===== MOBIL ===== */
 @media (max-width: 768px) {
-
   .product-wrapper {
-    max-width: 350px;  /* přesně jeden produkt */
+    max-width: 350px; /* přesně jeden produkt */
   }
 
   .product-grid {
     justify-content: flex-start; /* začátek gridu */
-    gap: 40px;                    /* žádná mezera */
-
+    gap: 40px; /* žádná mezera */
   }
 
   .product {
@@ -323,7 +313,6 @@ section {
 
 /* -----------------------KONEC PRODUCT------------------------------------ */
 
-
 /* ---------------------RECENZE----------------------------------- */
 .reviews-box {
   background: #222831;
@@ -332,10 +321,9 @@ section {
   text-align: center;
   margin: 50px auto;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   max-width: 750px;
   box-sizing: border-box;
-  
 }
 
 /* 🔹 Na mobilech přidáme odsazení od okrajů */
@@ -349,13 +337,13 @@ section {
   margin-bottom: 18px;
   font-size: 2rem;
   font-weight: 600;
-  }
+}
 .review-content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  }
+}
 
 .review-text {
   min-width: 180px;
@@ -363,22 +351,22 @@ section {
   transition: opacity 0.4s, transform 0.4s;
   opacity: 1;
   transform: translateX(0);
-  }
+}
 .review-text.hide-left {
   opacity: 0;
   transform: translateX(-80px);
-  }
+}
 .review-text.hide-right {
   opacity: 0;
   transform: translateX(80px);
-  }
+}
 .review-author {
   display: block;
   margin-top: 10px;
   font-size: 1rem;
   font-style: italic;
   color: #ccc;
-  }
+}
 
 .arrow-btn {
   background: none;
@@ -388,13 +376,12 @@ section {
   cursor: pointer;
   transition: color 0.2s;
   padding: 0 12px;
-  }
+}
 .arrow-btn:hover {
   color: #00adb5;
-  }
+}
 
 /*---------------------KONEC RECENZE------------------------------- */
-
 
 /* --------------------------Sekce newsletteru ---------------------------*/
 .email {
@@ -406,7 +393,7 @@ section {
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .email h2 {
@@ -505,7 +492,9 @@ footer {
   margin-bottom: 20px;
 }
 
-.footer-left, .footer-right, .footer-center {
+.footer-left,
+.footer-right,
+.footer-center {
   text-align: left;
   min-width: 250px;
 }
@@ -515,7 +504,8 @@ footer h3 {
   margin-bottom: 8px;
 }
 
-footer p, footer a {
+footer p,
+footer a {
   font-size: 1rem;
   color: #dfdfdf;
   text-decoration: none;
@@ -526,18 +516,17 @@ footer a:hover {
 }
 
 @media (max-width: 600px) {
-
   footer h3 {
     margin-top: 30px;
-    margin-bottom: 10px; }
-  
+    margin-bottom: 10px;
+  }
 }
 
 .rights {
   text-align: center;
-  background-color:#222831;
+  background-color: #222831;
   padding-bottom: 10px;
-  }
+}
 
 /*-----------------------------KONEC FOOTER------------------------------------- */
 
@@ -549,7 +538,7 @@ footer a:hover {
 }
 
 .back-home-btn {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #dbdbdb;
   border: none;
   padding: 15px 30px;
