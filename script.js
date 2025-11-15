@@ -72,7 +72,7 @@ const reviews = [
   },
   {
     text: "„Kvalitní produkty, určitě objednám znovu.“",
-    author: "- Admin"
+    author: "- Pavla S."
   },
   {
     text: "„To je dobré jak zmrd“",
