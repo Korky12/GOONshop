@@ -192,3 +192,11 @@ footer a:hover {
   margin-bottom: 20px;
 }
 
+.order-page {
+  max-width: 600px;
+  margin: 120px auto;
+  padding: 30px;
+  background-color: #2C2F33;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
