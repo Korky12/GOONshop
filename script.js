@@ -25,6 +25,43 @@ function slideNext() {
   }, 600);
 }
 
+// ====== SWIPE / TOUCH OVLÁDÁNÍ ======
+let startX = 0;
+let endX = 0;
+const swipeThreshold = 50; // kolik px musí přejet prst
+
+// začátek dotyku
+grid.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+
+  // zastavíme automat
+  resetTimer();
+});
+
+// pohyb prstu
+grid.addEventListener("touchmove", (e) => {
+  endX = e.touches[0].clientX;
+});
+
+// konec dotyku → vyhodnocení směru
+grid.addEventListener("touchend", () => {
+  const distance = endX - startX;
+
+  if (Math.abs(distance) > swipeThreshold) {
+    if (distance < 0) {
+      // swipe doleva → další produkt
+      slideNextManual();
+    } else {
+      // swipe doprava → zpět
+      slidePrev();
+    }
+  }
+
+  startX = 0;
+  endX = 0;
+});
+
+
 // Funkce pro resetování časovače
 function resetTimer() {
   clearInterval(autoSlideTimer);
